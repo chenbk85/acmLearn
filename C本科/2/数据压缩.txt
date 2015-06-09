@@ -1,0 +1,127 @@
+
+【代码填空】(满分16分)
+
+    某工业监控设备不断发回采样数据。每个数据是一个整数(0到1000之间)。各个数据间用空白字符（空格，TAB或回车换行）分隔。这些数据以文本形式被存储在文件中。
+
+    因为大多数时候，相邻的采样间隔数据是相同的，可以利用这个特征做数据的压缩存储。其方法是：对n(n>1)个连续相同的数字只记录n和该数字本身；对m(m>0)个连续不重复的数字，则记录 m*-1 和这些数字本身（之所以用负数，是为了与第一种情况区分，便于解压缩）。
+
+    例如：采样数字：
+    12 34 34 25 25 25 25 11 15 17 28 14 22 22 22 13
+    则根据上述规则变化后：
+    -1 12 2 34 4 25 -5 11 15 17 28 14 3 22 -1 13
+
+    下面的程序实现了这个功能。请仔细阅读分析代码，填写空白的部分。
+
+void pop(int s, int* buf, int c, FILE* fp)
+{
+	int i;
+	if(s)
+	{
+		fprintf(fp, "%d %d ", c, *buf);
+	}
+	else
+	{
+		fprintf(fp, "%d ", -c);
+		for(i=0; i<c; i++)
+		{
+			fprintf(fp, "%d ", buf[i]);
+		}
+	}
+}
+
+void dopack(FILE* r, FILE* w)
+{
+	int buf[BUF_N];
+
+	int pos = 0;  // 下一个数字在buf中将要存放的位置
+	int c = 0;    // 当前段已读入的整数个数
+	int pst; 
+	int cst;
+
+	while(fscanf(r, "%d", buf+pos)==1)
+	{
+		if(c==0)
+		{
+			c = pos = 1;
+			continue;
+		}
+
+		if(c==1)
+		{
+			pst = buf[0] == buf[1];
+			pos = pos + 1 - pst;
+			c = 2;
+			continue;
+		}
+		
+		cst = buf[pos-1] == buf[pos];
+		if(pst && !cst)
+		{
+			pop(pst, buf, c, w);
+			buf[0] = buf[1];
+			c = pos = 1;
+			pst = cst;
+		}
+		else if(!pst && cst || pos == BUF_N-1)
+		{
+			pop(pst, buf, c-1, w);
+			buf[0] = buf[pos-1];
+			c = 2;
+
+			if(!cst)
+			{
+				buf[1] = buf[pos];
+				pos = 2;
+			}
+			else
+			{
+				pos = 1;
+				pst = ______________;  // 填空1
+			}
+		}
+		else
+		{
+			c++;
+			if(!pst) pos++;
+		}
+	} // while
+
+	if(c>0) _____________________________;   // 填空2
+}
+
+void main()
+{
+	FILE* rfp;
+	FILE* wfp;
+
+	if((rfp=fopen(RFILE, "r")) == NULL)
+	{
+		printf("can not open %s!\n", RFILE);
+		exit(1);
+	}
+
+	if((wfp=fopen(WFILE, "w")) == NULL)
+	{
+		printf("can not open %s!\n", WFILE);
+		fclose(rfp);
+		exit(2);
+	}
+
+	dopack(rfp, wfp);
+
+	fclose(wfp);
+	fclose(rfp);
+}
+
+
+【注意】
+    只填写缺少的部分，不要抄写已有的代码。
+    所填写代码不超过1条语句（句中不会含有分号）
+    所填代码长度不超过256个字符。
+    答案写在“解答.txt”中，不要写在这里！
+
+
+
+
+
+      

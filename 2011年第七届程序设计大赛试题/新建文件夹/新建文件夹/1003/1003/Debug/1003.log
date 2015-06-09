@@ -1,0 +1,37 @@
+﻿生成启动时间为 2011/11/1 19:58:03。
+     1>项目“H:\Kingston\C程序设计\练习\C\1003\1003\1003.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“H:\Kingston\C程序设计\练习\C\1003\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\1003.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Visual Studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\1003.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Visual Studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\1003.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 1003.cpp
+         1003.cpp
+     1>h:\kingston\c程序设计\练习\c\1003\1003\1003.cpp(10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visual studio 2010\vc\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\kingston\c程序设计\练习\c\1003\1003\1003.cpp(13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\visual studio 2010\vc\include\stdio.h(304) : 参见“scanf”的声明
+       ManifestResourceCompile:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\1003.exe.embed.manifest.res" Debug\1003_manifest.rc 
+       Link:
+         D:\Visual Studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\1003.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.lib" /MACHINE:X86 Debug\1003.exe.embed.manifest.res
+         Debug\1003.obj
+         Debug\stdafx.obj
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\1003.exe.embed.manifest" /manifest Debug\1003.exe.intermediate.manifest
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\1003.exe.embed.manifest.res" Debug\1003_manifest.rc 
+       LinkEmbedManifest:
+         D:\Visual Studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\1003.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Kingston\C程序设计\练习\C\1003\Debug\1003.lib" /MACHINE:X86 Debug\1003.exe.embed.manifest.res
+         Debug\1003.obj
+         Debug\stdafx.obj
+         1003.vcxproj -> H:\Kingston\C程序设计\练习\C\1003\Debug\1003.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\1003.unsuccessfulbuild”。
+         正在对“Debug\1003.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“H:\Kingston\C程序设计\练习\C\1003\1003\1003.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.01
